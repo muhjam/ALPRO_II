@@ -1,0 +1,14 @@
+package DataTerstruktur;
+
+import java.util.Scanner;
+
+public class TabMhs {
+	int Nmaks=3;
+	Mahasiswa []a=new Mahasiswa[Nmaks];
+
+	public static void main(String[] args) {
+		TabMhs Mhs=new TabMhs();
+	}
+			
+			
+}

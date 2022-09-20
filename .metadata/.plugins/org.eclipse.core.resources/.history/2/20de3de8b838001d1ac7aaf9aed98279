@@ -1,0 +1,38 @@
+package DataTerstruktur;
+
+import java.util.Scanner;
+
+public class TabMhs {
+	int n=3;
+	Mahasiswa []a=new Mahasiswa[Nmaks];
+
+	void InitArray() {
+		System.out.println("Inisialisasi array");
+		for (int i=0; i<n;i++) {
+			a[i]=0;
+		}
+	}
+
+	void InputArray() {
+		System.out.println("Menginput element-element array");
+		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
+		for (int i=0; i<n;i++) {
+			System.out.print("Data ke-"+i+":");a[i]=sc.nextInt(); // tambahkan ini bila Scanner sc sudah di buat
+		}
+	}
+
+	void TampilArray() {
+		System.out.println("Menampilkan isi/element array");
+		for (int i=0; i<n;i++) {
+			System.out.println("Data ke "+i+" adalah "+a[i]);
+		}
+	}
+
+	
+//	Main Program dibawah ini
+	public static void main(String[] args) {
+		TabMhs Mhs=new TabMhs();
+	}
+			
+			
+}
