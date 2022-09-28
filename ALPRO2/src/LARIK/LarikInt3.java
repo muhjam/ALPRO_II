@@ -62,9 +62,6 @@ public class LarikInt3 {
 		
 		A.SetElemen(k);
 		A.TampilArray();
-		
-	
-		
 	}
 
 
