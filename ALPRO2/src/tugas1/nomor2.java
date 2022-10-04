@@ -18,13 +18,13 @@ public class nomor2 {
 		System.out.println("Menginput element-element array");
 		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
 		for (int i=0; i<N;i++) {
-			System.out.print("Data ke-"+(i+1)+":");a[i]=sc.nextInt(); // tambahkan ini bila Scanner sc sudah di buat
+			System.out.print("Data ke-"+(i)+":");a[i]=sc.nextInt(); // tambahkan ini bila Scanner sc sudah di buat
 		}
 	}
 	
 	void TampilArray() {
 		for(int i = 0; i< a.length;i++ ) {
-			System.out.println("Data ke-"+(i+1)+": "+a[i]);
+			System.out.println("Data ke-"+(i)+": "+a[i]);
 		}
 	}
 	
@@ -60,7 +60,7 @@ public class nomor2 {
 //	memanggil semua function dengan urutannya
 		A.InitArray();
 		A.InputArray();
-		//menggunakan Bubble Sort
+		//menggunakan Bubble Sort                        
 		// sorting kecil ke kebesar
 		A.SortingKecil(); 
 		System.out.println("");

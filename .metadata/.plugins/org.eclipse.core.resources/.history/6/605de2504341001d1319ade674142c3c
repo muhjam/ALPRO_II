@@ -1,0 +1,41 @@
+package Nasabah;
+
+import java.util.Scanner;
+
+public class Nasabah {
+	String NoRek;
+	String Nama;
+	float Saldo;
+	int Command;
+
+	void BacaNasabah() {
+		Scanner sc= new Scanner (System.in);
+		
+		System.out.print("NoRek (string): ");NoRek=sc.next();
+		System.out.print("Nama (string): ");Nama=sc.next();
+		System.out.print("Saldo (real): ");Saldo=sc.nextFloat();
+	}
+
+	void TulisNasabah() {
+		System.out.println("("+NoRek+", "+Nama+", "+Saldo+")");
+	}
+	
+	void BacaCommand() {
+		Scanner sc= new Scanner (System.in);
+		
+		System.out.print("Command (1=mencari, 2=mengubah, 3=a-z, 4=z-a): ");Command=sc.nextInt();
+	}
+	
+	
+//	Main Program dibawah ini
+	public static void main(String[] args) {
+	Nasabah S=new Nasabah();
+	S.BacaNasabah();
+	S.TulisNasabah();
+	S.BacaCommand();
+	}
+			
+}
+	
+	
+

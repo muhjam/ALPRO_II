@@ -30,6 +30,7 @@ public class TabNasabah {
 	}
 
 	void TampilArray() {
+		System.out.println("");
 		System.out.println("Menampilkan isi/element array");
 		for (int i=0; i<N;i++) {
 //			System.out.println("Data ke "+i+" adalah "+A[i].NIM+","+A[i].Nama+","+A[i].IPK);
@@ -50,13 +51,13 @@ public class TabNasabah {
 	}
 	
 //	tipe recordnya TabMahasiswa  
-	Nasabah GetElemen(int i) {
+	Nasabah GetElement(int i) {
 		return A[i];
 	}
 	
-	void SetElemen(int i) {
+	void SetElement(int i) {
 		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
-		System.out.print("Data index ke-"+i+":");A[i].BacaNasabah(); // dapet dari file mahasiswa
+		System.out.println("Input data index ke-"+i+":");A[i].BacaNasabah(); // dapet dari file mahasiswa
 	}
 	
 //	Main Program dibawah ini
@@ -67,6 +68,14 @@ public class TabNasabah {
 		Nas.InitArray();
 		Nas.TampilArray();
 		Nas.InputArray();
+		for(int i=0;i == 0;) {
+//			menentukan perintah
+			System.out.print("Command (1=mencari, 2=mengubah, 3=a-z, 4=z-a) : ");
+			int z=sc.nextInt();
+			System.out.println("");
+			
+//			mencari
+			if(z==1) {			
 		Nas.TampilArray();
 		System.out.println("");
 		System.out.print("Cari NoRek bernilai : ");
@@ -76,11 +85,23 @@ public class TabNasabah {
 		if(k!=-1) {
 			System.out.println("NoRek "+ x + " ke temu di index ke: "+k);
 			Nasabah R= new Nasabah();
-			R=Nas.GetElemen(k); R.TulisNasabah();
+			R=Nas.GetElement(k); R.TulisNasabah();
 		}else {
-			System.out.print("NoRek "+ x + " tidak ada ddalam larik");
+			System.out.print("NoRek "+ x + " tidak ada di dalam larik");
 		}
+		System.out.println("");
+		z=0;
+		}
+		
+//			mengubah
+			if(z==2) {
+				System.out.print("Mengubah data index ke : ");
+				int k=sc.nextInt();
+				Nas.GetElement(k);
+				Nas.SetElement(k);
+				Nas.TampilArray();
+				z=0;
+			}	
 	}
-			
-			
+	}	
 }

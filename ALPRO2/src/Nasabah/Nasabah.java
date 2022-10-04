@@ -6,6 +6,7 @@ public class Nasabah {
 	String NoRek;
 	String Nama;
 	float Saldo;
+	int Command;
 
 	void BacaNasabah() {
 		Scanner sc= new Scanner (System.in);
