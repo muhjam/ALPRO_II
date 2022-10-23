@@ -3,7 +3,7 @@ package Nasabah;
 import java.util.Scanner;
 
 public class TabNasabah {
-	int N=3;
+	int N=1;
 	Nasabah []A=new Nasabah[N];
 
 	void InitArray() {
@@ -14,6 +14,7 @@ public class TabNasabah {
 			R.NoRek="0";
 			R.Nama="$";
 			R.Saldo=4;
+			R.Password="xxx";
 			A[i]=R;
 		}
 	}
@@ -33,7 +34,6 @@ public class TabNasabah {
 		System.out.println("");
 		System.out.println("Menampilkan isi/element array");
 		for (int i=0; i<N;i++) {
-//			System.out.println("Data ke "+i+" adalah "+A[i].NIM+","+A[i].Nama+","+A[i].IPK);
 			System.out.print("Data ke "+i+" adalah ");
 			A[i].TulisNasabah();
 		}
@@ -41,11 +41,10 @@ public class TabNasabah {
 
 	int CariElement(String x) {
 		int index=-1;
-	       for (int i = 0; i < N; i++)
-	       {
-	        if(A[i].NoRek.equals(x)==true) {
+	       for (int i = 0; i < N; i++){
+	    	    if(A[i].NoRek.equals(x)==true) {
 	    		index= i;
-	        }
+	    	    }
 	       }
 	       return index;
 	}
@@ -59,6 +58,57 @@ public class TabNasabah {
 		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
 		System.out.println("Input data index ke-"+i+":");A[i].BacaNasabah(); // dapet dari file mahasiswa
 	}
+	
+
+//     boolean Login() {
+//    	 Boolean login = false;
+//		int i=0;
+//		int coba=0;
+//		
+//		System.out.println("Login!");
+//		Scanner sc= new Scanner(System.in);
+//		System.out.print("NoRek anda :");String id=sc.next();
+//		System.out.print("Password anda :");String pass=sc.next();
+//			
+//		while((i<N-1)&&(!A[i].NoRek.contentEquals(id))){
+//				i++;
+//		}
+//			
+//		if(A[i].NoRek.equals(id)) {
+//				
+//			while(coba<4) {
+//				if(A[i].Password.equals(pass)){
+//				   System.out.println("");
+//				   System.out.println("Selamat Datang "+A[i].Nama);
+//				   System.out.println("");
+//				   A[i].TampilNasabah();
+//				   login=true;
+//				   break;
+//				 }else if(!A[i].Password.equals(pass)&&coba<3){
+//						  System.out.println("");
+//						  System.out.println("Password yang anda inputkan salah");
+//					      System.out.println("Sisa percobaan "+(3-coba)+"x lagi");
+//						  System.out.print("Password anda :");pass=sc.next();
+//						  coba++;
+//				 		}else{
+//				 		      System.out.println("");
+//					          System.out.println("Kartu Anda Tertelan");
+//					          login=false;
+//					          break;
+//				 			 }
+//			}
+//		
+//		}else{
+//		      System.out.println("Maaf, NoRek anda tidak terdaftar");
+//		      return login;
+//		}
+//			
+//		return login;
+//	}
+	
+     
+     
+     
 	
 //	Main Program dibawah ini
 	public static void main(String[] args) {
@@ -97,14 +147,31 @@ public class TabNasabah {
 		
 //			mengubah
 		if(z==2) {
+		int k = 0;
 		System.out.print("Mengubah data index ke : ");
-		int k=sc.nextInt();
-		Nas.GetElement(k);
-		Nas.SetElement(k);
-		Nas.TampilArray();
+//		int k=sc.nextInt(); //ga dipake
+//		Nas.GetElement(k);
+//		Nas.SetElement(k);
+//		Nas.TampilArray();
+		Nasabah R= new Nasabah(); // disimpan dahulu
+		R=Nas.GetElement(k); R.TulisNasabah();
+		Nas.SetElement(k); Nas.TampilArray();
 		z=0;
 		}	
 	}
 		
+//		login
+//		System.out.println("");
+//		if(Nas.Login()==false) {
+//			System.out.println("");
+//			Nas.Login();
+//		}else{
+//			System.out.println("Ketik:");
+//			System.out.println("1. Mengisi Saldo");
+//			System.out.println("2. Tarik Saldo");
+//			System.out.println("3. Cek Saldo");
+//			System.out.println("4. Logout Saldo");
+//			System.out.print("Lakukan: ");int z=sc.nextInt();
+//		}	
 	}	
 }

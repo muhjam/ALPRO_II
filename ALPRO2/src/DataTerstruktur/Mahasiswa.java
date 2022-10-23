@@ -14,10 +14,17 @@ public class Mahasiswa {
 		System.out.print("Nama (string): ");Nama=sc.next();
 		System.out.print("IPK (real): ");IPK=sc.nextFloat();
 	}
+	
+	void BacaIpk() {
+		Scanner sc= new Scanner (System.in);
+		
+		System.out.print("IPK (real): ");IPK=sc.nextFloat();
+	}
 
 	void TulisMahasiswa() {
 		System.out.print("("+NIM+", "+Nama+", "+IPK+")");
 	}
+	
 	
 	
 //	Main Program dibawah ini
