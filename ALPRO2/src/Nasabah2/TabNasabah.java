@@ -1,11 +1,14 @@
 package Nasabah2;
 
 import java.util.Scanner;
+import java.time.LocalDateTime;  // Import the LocalDateTime class
+import java.time.format.DateTimeFormatter;  // Import the 
 
 public class TabNasabah {
 	int N=3;
 	Nasabah []A=new Nasabah[N];
 
+    
 	void InitArray() {
 		Nasabah R=new Nasabah();
 		
@@ -206,6 +209,8 @@ public class TabNasabah {
 		return x;
      }
      
+
+     
      void TeransferBerhasil(float x, int i) {
     	float saldo=x;
     	saldo= A[i].Saldo + saldo;
@@ -217,6 +222,8 @@ public class TabNasabah {
     	A[i].CekSaldo();
      }
      	
+  
+     
 //	Main Program dibawah ini
 	public static void main(String[] args) {
 		TabNasabah Nas=new TabNasabah();
@@ -270,7 +277,7 @@ public class TabNasabah {
 					  	int index = Nas.CariElement(rek);
 					  	if(index != -1) {
 						Nas.TeransferBerhasil(Nas.TransferSaldo(index, i), index);
-						Nas.CekSaldo(index);
+						Nas.CekSaldo(i);
 						break;
 						}else {
 						  	System.out.println("NoRek yang anda tuju tidak ada!");
@@ -288,6 +295,7 @@ public class TabNasabah {
 					continue;
 				}
 				
+				
 				if(z==5) {
 					System.out.println("Logout");
 					login=-1;
@@ -299,28 +307,3 @@ public class TabNasabah {
 			
 	}
 }
-
-
-//void TarikSaldo(int i) {
-//	Scanner sc= new Scanner(System.in);
-//	int a=0;
-//	while(a==0) {
-//       	System.out.print("Nominal (min diatas 10k): ");float tarik=sc.nextFloat();
-//    	if(tarik > 10000) {
-//			float saldo= A[i].Saldo - tarik;
-//    		if(saldo>10000) {
-//    			System.out.println("Uang anda sudah ditarik senilai Rp."+tarik);
-//    			A[i].SaldoNasabah(saldo);
-//	    		break;
-//    		}else {
-//    			System.out.println("Maaf saldo anda tidak cukup!");
-//    			break;
-//    		}
-//   		}else{
-//    			System.out.println("Minimal tarik saldo diatas Rp.10.000");
-//    			continue;
-//   		}
-//	
-//	}
-// }
-// 

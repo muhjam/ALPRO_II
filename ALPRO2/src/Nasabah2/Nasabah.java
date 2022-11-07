@@ -37,7 +37,6 @@ public class Nasabah {
 	}
 	
 	
-	
 //	Main Program dibawah ini
 	public static void main(String[] args) {
 	Nasabah S=new Nasabah();
