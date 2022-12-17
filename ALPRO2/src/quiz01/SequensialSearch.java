@@ -49,6 +49,20 @@ public class SequensialSearch {
 	       return index;
 	}
 	
+
+	int Cari(int x) {
+		int index=-1;
+		int i=0;
+	       while (i<=N-1)
+	       {
+	        if(a[i]==x) {
+	    		index= i;
+	        }
+	        i++;
+	       }
+	       return index;
+	}
+	
 	int search(int x) {
  		int index=-1;
  		int i=0;
@@ -67,7 +81,7 @@ public class SequensialSearch {
 	int SeqSearch(int x) {
 	 int i=0;
 	 
-	 while((i<N-1)&&(a[i]>x)) {
+	 while((i<N-1)&&(a[i]!=x)) {
 	 		i++;
 	 }
 	 

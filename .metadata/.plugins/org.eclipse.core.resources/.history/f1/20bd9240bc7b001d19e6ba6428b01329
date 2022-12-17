@@ -1,0 +1,19 @@
+package Array;
+
+import java.util.Scanner;
+
+public class ArrayString {
+//	membuat function
+	int N=5;
+	String[] A= {"udin", "samal"}; // membuat array
+	int[] B= {1,2,3};
+	
+
+	
+//	isi eksekusi
+	public static void main(String[] args) {
+		Array A=new Array(); // manggil class
+		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
+
+	}
+}
