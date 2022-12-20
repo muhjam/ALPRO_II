@@ -30,13 +30,13 @@ public class InsertionSort {
 	}
 	
 	void InsertionSort() {
-		   int tahap, temp, i;
+		   int tahap, i, temp;
 		    for (tahap = 1; tahap < N-1; tahap++)
 		    {
 		        temp = A[tahap];
 		        i = tahap - 1;
 		 
-		        while (i >= 0 && A[i] > temp)
+		        while (A[i] > temp && i >= 1)
 		        {
 		            A[i + 1] = A[i];
 		            i = i - 1;

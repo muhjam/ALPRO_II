@@ -30,6 +30,7 @@ public class InsertionSort {
 	}
 	
 	void InsertionSort() {
+//		i, key, j
 		   int tahap, temp, i;
 		    for (tahap = 1; tahap < N-1; tahap++)
 		    {
