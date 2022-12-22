@@ -264,7 +264,6 @@ public class Functions {
 							    	   if(saldo>R.getSaldo()) {
 							    		   System.out.println("Maaf saldo anda tidak mencukupi");
 							    		   System.out.println("Sisa Saldo Anda : Rp."+ R.getSaldo());
-							    		   System.out.println("----------");
 							    		   System.out.print("1.Lanjut/0.Batal: ");x=sc.nextInt();
 							    		   System.out.println("");
 							    		   if(x==0) {

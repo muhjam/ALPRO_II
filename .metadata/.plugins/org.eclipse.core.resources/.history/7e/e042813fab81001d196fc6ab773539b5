@@ -222,7 +222,7 @@ public class Functions {
 			        	  curR = in.readObject(); // baca lagi...
 			        } 
 		       } catch (EOFException e) {}
-		       System.out.print("1.Lanjut/0.Batal: ");int x=sc.nextInt();
+		       System.out.print("1.Lanjut/0.Batal  ");int x=sc.nextInt();
 		       if(x!=0) {
 		       try {	
 		    	// KALO CUKUP ISI FILE UTAMA DI BACKUP KE TEMP
@@ -264,16 +264,16 @@ public class Functions {
 							    	   if(saldo>R.getSaldo()) {
 							    		   System.out.println("Maaf saldo anda tidak mencukupi");
 							    		   System.out.println("Sisa Saldo Anda : Rp."+ R.getSaldo());
-							    		   System.out.println("----------");
-							    		   System.out.print("1.Lanjut/0.Batal: ");x=sc.nextInt();
-							    		   System.out.println("");
-							    		   if(x==0) {
-							    			   R=new Nasabah(R.getNorek(),R.getPin(),R.getNama(),R.getSaldo());
-								    		   out.writeObject(R); 
-								    		   return;
-							    		   }
+							    		   System.out.print("1.Lanjut/0.Batal  ");x=sc.nextInt();
+							    		   R=new Nasabah(R.getNorek(),R.getPin(),R.getNama(),R.getSaldo()); 
+							    	   }
+							    	   if(x==0) {
+							    		   continue;
 							    	   }
 				        		   }while(saldo<10000||saldo>R.getSaldo());
+				        		   if(x==0) {
+						    		   continue;
+						    	   }
 				        		   saldo=R.getSaldo()-saldo;
 				        		   R=new Nasabah(R.getNorek(),R.getPin(),R.getNama(),saldo);
 				        		   System.out.println("Saldo berhasil ditarik");
