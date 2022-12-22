@@ -109,20 +109,20 @@ public class AllSort {
 	}
 	
 	void InsertionSort() {
-		int i,temp;
-		
-		for(int tahap=1; tahap<=N-1; tahap++) {
-			temp=A[tahap];
-			i=tahap;
-			
-			while(A[i-1]<temp && i>0) {
-				A[i]=A[i-1];
-				i--;
-			}
-			A[i]=temp;
-		}
+		   int tahap, temp, i;
+		    for (tahap = 1; tahap <= N-1; tahap++)
+		    {
+		        temp = A[tahap];
+		        i = tahap - 1;
+		 
+		        while (i >= 0 && A[i] > temp)
+		        {
+		            A[i + 1] = A[i];
+		            i--;
+		        }
+		        A[i + 1] = temp;
+		    }
 	}
-	
 //	isi eksekusi
 	public static void main(String[] args) {
 		AllSort A=new AllSort(); // manggil class
