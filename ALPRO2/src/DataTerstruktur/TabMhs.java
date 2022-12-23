@@ -2,7 +2,7 @@ package DataTerstruktur;
 
 import java.util.Scanner;
 
-import Nasabah2.Nasabah;
+import NasabahArray2.Nasabah;
 
 public class TabMhs {
 	int N=3;

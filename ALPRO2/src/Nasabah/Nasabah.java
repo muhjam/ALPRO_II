@@ -1,42 +1,65 @@
 package Nasabah;
 
+
 import java.util.Scanner;
 
-public class Nasabah {
-	String NoRek;
-	String Nama;
-	float Saldo;
-	String Password;
-
-	void BacaNasabah() {
-		Scanner sc= new Scanner (System.in);
+// ingat kalo java arsip di record itu harus ada implements java.io.Serializable
+class Nasabah implements java.io.Serializable {
+	String norek,nama,pin;
+	float saldo;
+	
+	Nasabah(){
 		
-		System.out.print("NoRek (string): ");NoRek=sc.next();
-		System.out.print("Nama (string): ");Nama=sc.next();
-		System.out.print("Saldo (real): ");Saldo=sc.nextFloat();
-		System.out.print("Password (String): ");Password=sc.next();
 	}
-
+	
+	Nasabah(String no, String nm, String pn, float uang ){
+		norek=no;
+		pin=pn;
+		nama=nm;
+		saldo=uang;
+		
+	}
+	
+	void BacaNasabah() {
+		System.out.println("Baca nilai setiap elemen array dari keyboard");
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.print("norek  "); norek=sc.next();
+		System.out.print("nama  "); nama=sc.next();
+		System.out.print("pin  "); pin=sc.next();
+		System.out.print("saldo ");saldo=sc.nextFloat();
+	}
+	
 	void TulisNasabah() {
-		System.out.println("("+NoRek+", "+Nama+", "+Saldo+","+Password+")");
+		System.out.println("Datanya "+": "+norek+
+				", "+nama+", "+saldo);
 	}
 	
-	void TampilNasabah() {
-		System.out.println("NoRek	: "+NoRek);
-		System.out.println("Nama	: "+Nama);
-		System.out.println("Saldo	: "+Saldo);
-		System.out.println("Password: "+Password);
+	String getNorek(){
+		return norek;	
 	}
+	
+	String getPin(){
+		return pin;	
+	}
+	
+	String getNama(){
+		return nama;	
+	}
+	
+	Float getSaldo(){
+		return saldo;	
+	}
+	
+	
+	 public static void main(String[] args) {
+		 Nasabah M=new Nasabah();
+		 
+		 M.BacaNasabah();
+		 M.TulisNasabah();
+		 
+		 
+	 }
 
-	
-//	Main Program dibawah ini
-	public static void main(String[] args) {
-	Nasabah S=new Nasabah();
-	S.BacaNasabah();
-	S.TulisNasabah();
-	}
-			
 }
-	
-	
 
