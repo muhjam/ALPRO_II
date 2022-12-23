@@ -127,7 +127,7 @@ public class MainNasabah {
         Functions F= new Functions();
     	Scanner sc= new Scanner(System.in);
               
-//        B.SaveToFile(); // tulis ke file
+        B.SaveToFile(); // tulis ke file
     	  B.ViewFile();
 //        B.ViewTemp();
     	int i=1;
@@ -152,13 +152,13 @@ public class MainNasabah {
                  		break;
                  	 case 2:
                  		System.out.print("1.Lanjut/0.Batal: "); y=sc.nextInt();
- 				       if(y!=0) {
+ 				       if(x!=0) {
                  		 F.StorSaldo(norek);
  				       }
                  		 break;
                  	 case 3:
                  		System.out.print("1.Lanjut/0.Batal: "); y=sc.nextInt();
-   				       if(y!=0) {
+   				       if(x!=0) {
                    		 F.TarikSaldo(norek);
    				       }
                  		break;
