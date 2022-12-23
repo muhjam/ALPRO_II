@@ -135,7 +135,7 @@ public class MainNasabah {
     		String norek=F.Login();
             if(!norek.isEmpty()) {
             	int x,y;
-            	 System.out.println("==== Selamat Datang "+F.CekNama(norek)+" =====");
+            	 System.out.println("==== Selamat Datang"+F.CekNama(norek)+" =====");
             	do {
                 	 System.out.println("Silahkan Pilih layanan berikut:");
                 	 System.out.println("1: Cek Saldo");

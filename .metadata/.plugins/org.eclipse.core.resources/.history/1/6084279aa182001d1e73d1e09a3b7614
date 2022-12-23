@@ -80,10 +80,8 @@ public class Functions {
 	  		public String CekNama(String norek){
 	  		    Nasabah R = new Nasabah();
 	  		    Boolean ketemu;
-	  		    String nama;
 	  		    System.out.println("====== Cek Saldo ======");     
 	  		    ObjectInputStream in = null;
-	  		    nama="";
 	  		    try {
 	  		     // 1. buka file untuk dibaca	
 	  		       in=new ObjectInputStream(new FileInputStream
@@ -101,16 +99,15 @@ public class Functions {
 	  			        	  curR = in.readObject(); // baca lagi...
 	  			         } 
 	  		       } catch (EOFException e) {}
-	  	        		 if(ketemu==true) {
-		  	        		  nama= R.getNama();
-		  	        	  }
+	  	        	  if(ketemu==true) {
+	  	        		  System.out.println("Saldo Anda : Rp."+ R.getSaldo());
+	  	        	  }
 	  		             System.out.println("");				
 	  		       } catch (ClassNotFoundException e) {
 	  		             System.out.println("Class tidak ditemukan.");
 	  		       } catch (IOException e) {
 	  		             e.printStackTrace();
-	  		      }    
-	  		    return nama;
+	  		      }           
 	  		    }
 	
 	    // CEK SALDO

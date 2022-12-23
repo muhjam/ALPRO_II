@@ -109,8 +109,8 @@ public class Functions {
 	  		             System.out.println("Class tidak ditemukan.");
 	  		       } catch (IOException e) {
 	  		             e.printStackTrace();
-	  		      }    
-	  		    return nama;
+	  		      }      
+	  		    
 	  		    }
 	
 	    // CEK SALDO

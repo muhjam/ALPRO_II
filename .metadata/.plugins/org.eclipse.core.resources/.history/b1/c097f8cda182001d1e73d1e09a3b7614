@@ -102,15 +102,15 @@ public class Functions {
 	  			         } 
 	  		       } catch (EOFException e) {}
 	  	        		 if(ketemu==true) {
-		  	        		  nama= R.getNama();
+		  	        		  nama= R.getaNama();
 		  	        	  }
 	  		             System.out.println("");				
 	  		       } catch (ClassNotFoundException e) {
 	  		             System.out.println("Class tidak ditemukan.");
 	  		       } catch (IOException e) {
 	  		             e.printStackTrace();
-	  		      }    
-	  		    return nama;
+	  		      }      
+	  		    
 	  		    }
 	
 	    // CEK SALDO

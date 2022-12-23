@@ -75,43 +75,6 @@ public class Functions {
 	      }  
 		return hasil;	
 	    }
-	    
-	    // CEK Nama
-	  		public String CekNama(String norek){
-	  		    Nasabah R = new Nasabah();
-	  		    Boolean ketemu;
-	  		    String nama;
-	  		    System.out.println("====== Cek Saldo ======");     
-	  		    ObjectInputStream in = null;
-	  		    nama="";
-	  		    try {
-	  		     // 1. buka file untuk dibaca	
-	  		       in=new ObjectInputStream(new FileInputStream
-	  		    		   ("/Users/jamjam/Desktop/FileJava/Nasabah/NasabahKasihBunda.dat"));
-	  		       Object curR = in.readObject();	  
-	  		       ketemu=false;
-	  		       try {	
-	  		       // 2. baca dan proses setiap record yang dibaca 
-	  		    	 
-	  		    	   while (ketemu==false) {
-	  			        	   R = (Nasabah) curR; //inputstream -> objek customer
-	  			        	  if(R.getNorek().contentEquals(norek)){
-	  			        		  ketemu=true;
-	  			        	  }		
-	  			        	  curR = in.readObject(); // baca lagi...
-	  			         } 
-	  		       } catch (EOFException e) {}
-	  	        		 if(ketemu==true) {
-		  	        		  nama= R.getNama();
-		  	        	  }
-	  		             System.out.println("");				
-	  		       } catch (ClassNotFoundException e) {
-	  		             System.out.println("Class tidak ditemukan.");
-	  		       } catch (IOException e) {
-	  		             e.printStackTrace();
-	  		      }    
-	  		    return nama;
-	  		    }
 	
 	    // CEK SALDO
 		public void CekSaldo(String norek){

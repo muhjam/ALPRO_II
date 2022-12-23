@@ -101,16 +101,13 @@ public class Functions {
 	  			        	  curR = in.readObject(); // baca lagi...
 	  			         } 
 	  		       } catch (EOFException e) {}
-	  	        		 if(ketemu==true) {
-		  	        		  nama= R.getNama();
-		  	        	  }
+	  	        	 
 	  		             System.out.println("");				
 	  		       } catch (ClassNotFoundException e) {
 	  		             System.out.println("Class tidak ditemukan.");
 	  		       } catch (IOException e) {
 	  		             e.printStackTrace();
-	  		      }    
-	  		    return nama;
+	  		      }           
 	  		    }
 	
 	    // CEK SALDO
