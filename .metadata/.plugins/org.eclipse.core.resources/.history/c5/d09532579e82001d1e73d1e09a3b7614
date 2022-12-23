@@ -91,6 +91,7 @@ public class AllSort{
 		}
 	}
 	
+	
 //	terurut membesar
 	void BubbleSort2() {
 		int tahap=1, temp;
@@ -188,6 +189,7 @@ public class AllSort{
 		AllSort A=new AllSort(); // manggil class
 		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
 //	memanggil semua function dengan urutannya
+
 		A.InitArray();
 		A.InputArray();
 		A.TampilArray();
