@@ -102,21 +102,21 @@ public class MainMatrik {
 		System.out.println("Menampilkan Matrik B");
 		B.TampilMatrik();
 		
-//		PenjumlahanMatrik(A, B, C);
-//		System.out.println("Menampilkan Matrik C (Penjumlahan)");
-//		C.TampilMatrik();
+		PenjumlahanMatrik(A, B, C);
+		System.out.println("Menampilkan Matrik C (Penjumlahan)");
+		C.TampilMatrik();
 		
-//		PenguranganMatrik(A, B, C);
-//		System.out.println("Menampilkan Matrik C (Pengurangan)");
-//		C.TampilMatrik();
+		PenguranganMatrik(A, B, C);
+		System.out.println("Menampilkan Matrik C (Pengurangan)");
+		C.TampilMatrik();
 		
 		PerkalianMatrik(A, B, C);
 		System.out.println("Menampilkan Matrik C (Perkalian)");
 		C.TampilMatrik();
 		
-//		SegitigaAtas(SGA, A);
-//		System.out.println("Menampilkan Matrik SGA");
-//		SGA.TampilMatrik();
+		SegitigaAtas(SGA, A);
+		System.out.println("Menampilkan Matrik SGA");
+		SGA.TampilMatrik();
 		
 	}
 

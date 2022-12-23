@@ -25,8 +25,6 @@ public class Functions {
 
 			System.out.println("========== Login ATM Kasih Bunda ======");     
 			ObjectInputStream in = null;
-			 // TRY DI DALAM TRY TETAPI IN OUT NYA SATU SAJA
-		       // 2. baca dan proses setiap record yang dibaca  
 		    	   System.out.print("Norek :  "); norek=sc.next();
 		    	   System.out.print("PIN :  "); pin=sc.next();
 		    	   hasil="";
@@ -120,7 +118,6 @@ public class Functions {
 		    System.out.println("====== Stor Saldo ======");     
 		    ObjectInputStream in = null; // read
 		    ObjectOutputStream out = null; // write
-		    // TRY DI DALAM TRY APABILA IN OUT NYA MASING MASING
 		    try {	    	// 1. buka file untuk dibaca	
 		       try {
 		    	   in=new ObjectInputStream(new FileInputStream
@@ -172,9 +169,7 @@ public class Functions {
 		             e.printStackTrace();
 		      }  
 		    }	
-		
-		 
-			
+
 		// TARIK SALDO
 				public void TarikSaldo(String norek){
 				    Nasabah R = new Nasabah();
@@ -256,7 +251,7 @@ public class Functions {
 					     	   
 					       } catch (EOFException e) {}
 						try {
-							// FILE TEMP DI UBAH LALU DI PINDAHKAN KEMBALI KE FILE UTAMA					
+							// FILE TEMP DI PINDAHKAN KEMBALI KE FILE UTAMA					
 						 	// 1. buka file untuk dibaca	
 						     in=new ObjectInputStream(new FileInputStream
 						    		   ("/Users/jamjam/Desktop/FileJava/Nasabah/Temp.dat"));
@@ -283,8 +278,6 @@ public class Functions {
 				             e.printStackTrace();
 				      }  
 				    }	
-				
-		
 }
 // end functions
 

@@ -121,29 +121,6 @@ public class MatrikBisnis {
 			System.out.println("Tidak Ketemu");
 		}
 	}
-	
-	
-//	int GetElemen(int x) {
-//		for (int i=0; i<M;i++) {
-//			for(int j=0; j<N;j++) {
-//				if(MB[i][j].Kode.contentEquals(x)) {
-//					
-//				}
-//			}
-//		}
-//	}
-//	void SetElemen(int i, int j, int x) {
-//		Boolean status;
-//		Scanner sc = new Scanner(System.in);
-//		do {
-//			if(x==1) {
-//				status=true;
-//			}else {
-//				status=false;
-//			}
-//		}while(x<1||x>2);
-//		MB[i][j].Status=status;
-//	}
 
 	public static void main(String[] args) {
 		MatrikBisnis A=new MatrikBisnis(); // manggil class

@@ -8,9 +8,6 @@ public class MatrikInteger {
 	int m=3; // baris semua matrik
 	int n=3; // kolom semua matrik
 	int [][]a=new int[m][n];
-//	int p=3;
-//	int q=3;
-//	int [][]b=new int[p][q];
 
 	Scanner sc = new Scanner(System.in);
 	
@@ -21,7 +18,6 @@ public class MatrikInteger {
 			}
 		}
 	}
-	
 
 	void InputMatrik() {
 		for (int i=0; i<m;i++) {
