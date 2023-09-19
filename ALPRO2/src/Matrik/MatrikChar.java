@@ -5,8 +5,8 @@ import java.util.Scanner;
 import latihan1.ArrayMahasiswa;
 
 public class MatrikChar {
-	int m=5;
-	int n=5;
+	int m=2;
+	int n=2;
 	char x;
 	char [][]a=new char[m][n];
 
@@ -48,6 +48,19 @@ void TampilMatrik() {
 	for (int i=0; i<m;i++) {
 		for(int j=0; j<n;j++) {
 			System.out.print(a[i][j]+"");
+		}
+		System.out.println();
+	}
+}
+
+void Frekuensi() {
+	int f=0;
+	System.out.println("Menampilkan isi/element array");
+	for (int i=0; i<m;i++) {
+		for(int j=0; j<n;j++) {
+			if(a[i][j]==0) {
+				f=f+1;
+			}
 		}
 		System.out.println();
 	}

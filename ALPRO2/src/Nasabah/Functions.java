@@ -228,7 +228,7 @@ public class Functions {
 					    	 while (batal==false&&true) {
 					        	   R = (Nasabah) curR; //inputstream -> objek customer
 					        	  if(R.getNorek().contentEquals(norek)&& R.getSaldo()< 10000){
-					        		  System.out.println("Mohon maaf anda miskin!");
+					        		  System.out.println("Mohon maaf sldo anda kurang!");
 					        			 System.out.println("");
 					        			batal=true;
 					        	  }else        	  
@@ -261,8 +261,7 @@ public class Functions {
 							    		   batal=true;
 						    		  }
 						    	   }
-						    	   
-			        		   }while(batal==false&&tarik<10000||batal==false&&R.getSaldo()<tarik);
+			        		   }while(batal==false&&tarik<10000&&R.getSaldo()<tarik);
 						    
 				     		   while (batal==false && true) {
 					        	   R = (Nasabah) curR; //inputstream -> objek customer

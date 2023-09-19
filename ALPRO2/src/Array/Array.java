@@ -7,7 +7,7 @@ public class Array {
 	int N=5;
 	
 	// membuat array
-	String[] A= {"udin", "samal"}; 
+	String[] nama= {"udin", "samal"}; 
 	int[] B= {1,2,3};
 	
 	String[] C=new String[N];
@@ -16,12 +16,15 @@ public class Array {
 		C[1]="samal";
 	}
 	
+	void tampil() {
+		System.out.print(nama[1]);
+	}
 
 	
 //	isi eksekusi
 	public static void main(String[] args) {
 		Array A=new Array(); // manggil class
 		Scanner sc = new Scanner(System.in); // supaya bisa di inputkan
-
+		A.tampil();
 	}
 }

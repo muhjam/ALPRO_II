@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class nomor2 {
 //	membuat function
-	int N=5;
+	int N=3;
 	int []a=new int[N]; // membuat array
 	
 	void InitArray() {

@@ -51,17 +51,17 @@ public class MainMatrik {
 //	}
 	
 	static void PerkalianMatrik(MatrikInteger A, MatrikInteger B, MatrikInteger C) {
-		int x=0;
+		int x;
 
 		if(A.n==B.m){
 			for (int i=0; i<A.m;i++) {
 				C.SetElemen(i, 0, 0);
 				for(int j=0; j<A.n;j++) {
+					x=0;
 					for(int k=0;k<A.m;k++) {
 						x+=A.GetElemen(i, k)*B.GetElemen(k, j);
 					}
 					C.SetElemen(i, j, x);
-					x=0;
 				}
 			}
 		}else{
@@ -85,6 +85,7 @@ public class MainMatrik {
 		}
 	}
 	
+	
 
 	public static void main(String[] args) {
 		MatrikInteger A=new MatrikInteger(); // manggil class
@@ -98,21 +99,21 @@ public class MainMatrik {
 		System.out.println("Menampilkan Matrik A");
 		A.TampilMatrik();
 	
-		B.InputMatrik();
-		System.out.println("Menampilkan Matrik B");
-		B.TampilMatrik();
+//		B.InputMatrik();
+//		System.out.println("Menampilkan Matrik B");
+//		B.TampilMatrik();
 		
-		PenjumlahanMatrik(A, B, C);
-		System.out.println("Menampilkan Matrik C (Penjumlahan)");
-		C.TampilMatrik();
+//		PenjumlahanMatrik(A, B, C);
+//		System.out.println("Menampilkan Matrik C (Penjumlahan)");
+//		C.TampilMatrik();
+//		
+//		PenguranganMatrik(A, B, C);
+//		System.out.println("Menampilkan Matrik C (Pengurangan)");
+//		C.TampilMatrik();
 		
-		PenguranganMatrik(A, B, C);
-		System.out.println("Menampilkan Matrik C (Pengurangan)");
-		C.TampilMatrik();
-		
-		PerkalianMatrik(A, B, C);
-		System.out.println("Menampilkan Matrik C (Perkalian)");
-		C.TampilMatrik();
+//		PerkalianMatrik(A, B, C);
+//		System.out.println("Menampilkan Matrik C (Perkalian)");
+//		C.TampilMatrik();
 		
 		SegitigaAtas(SGA, A);
 		System.out.println("Menampilkan Matrik SGA");
